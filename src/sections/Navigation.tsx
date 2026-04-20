@@ -44,7 +44,7 @@ export default function Navigation() {
           <path d="M16 8L24 26H8L16 8Z" fill="#1A3A5C" />
         </svg>
         <span className="font-sans font-medium text-sm tracking-wider uppercase text-[var(--white)]">
-          City Surface Training
+          Surface Repair Courses
         </span>
       </div>
 
