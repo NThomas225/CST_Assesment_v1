@@ -25,7 +25,7 @@ export default function Footer() {
                 <path d="M16 8L24 26H8L16 8Z" fill="#1A3A5C" />
               </svg>
               <span className="font-sans font-medium text-sm tracking-wider uppercase text-[var(--white)]">
-                City Surface Training
+                Surface Repair Courses
               </span>
             </div>
             <p className="font-sans text-sm text-[var(--grey)] leading-relaxed">
@@ -74,7 +74,7 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[var(--orange)] flex-shrink-0" />
                 <span className="font-sans text-sm text-[var(--grey)]">
-                  info@citysurfacetraining.com
+                  info@surfacerepaircourses.com
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -95,7 +95,7 @@ export default function Footer() {
           style={{ borderTop: '1px solid var(--border-subtle)' }}
         >
           <span className="font-sans text-xs text-[var(--grey)]">
-            2025 City Surface Training. All rights reserved.
+            2025 Surface Repair Courses. All rights reserved.
           </span>
           <div className="flex items-center gap-6">
             {['Privacy', 'Terms', 'Cookies'].map((item) => (
