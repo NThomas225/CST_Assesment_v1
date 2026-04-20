@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const plans = [
   {
     name: 'STARTER',
-    price: 'Free',
+    price: 'GH\u20B5 500',
     period: '',
     subtitle: 'Aptitude screening + 1 module attempt',
     features: [
@@ -22,7 +22,7 @@ const plans = [
   },
   {
     name: 'PROFESSIONAL',
-    price: 'GH\u20B5 150',
+    price: 'GH\u20B5 1500',
     period: '/assessment',
     subtitle: 'Full certification + employer network access',
     features: [
@@ -38,7 +38,7 @@ const plans = [
   },
   {
     name: 'ENTERPRISE',
-    price: 'Custom',
+    price: 'GH\u20B5 5000',
     period: '',
     subtitle: 'For training organizations & contractors',
     features: [
