@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Geist Sans';
+  src: url('/fonts/Geist-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMono-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --black: #0A0A0A;
+    --white: #F4F4F4;
+    --orange: #D4943A;
+    --blue: #1A3A5C;
+    --grey: #888888;
+    --light-grey: #E5E5E5;
+    --bg-primary: #0A0A0A;
+    --bg-secondary: #111111;
+    --bg-card: #1A1A1A;
+    --border-subtle: rgba(212, 148, 58, 0.15);
+    --text-primary: #F4F4F4;
+    --text-secondary: #888888;
+    --accent-orange: #D4943A;
+    --accent-blue: #1A3A5C;
+    --success: #4CAF50;
+    --warning: #FFA726;
+    --error: #EF5350;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 35 60% 53%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 7%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 53%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 96%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 96%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 35 60% 53%;
+    --radius: 0px;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Geist Sans', 'Geist', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@layer utilities {
+  .font-mono-accent {
+    font-family: 'Geist Mono', 'GeistMono', ui-monospace, monospace;
+  }
+
+  .text-orange {
+    color: var(--orange);
+  }
+
+  .bg-orange {
+    background-color: var(--orange);
+  }
+
+  .border-orange {
+    border-color: var(--orange);
+  }
+
+  .text-grey {
+    color: var(--grey);
+  }
+
+  .bg-card-dark {
+    background-color: var(--bg-card);
+  }
+
+  .bg-secondary-dark {
+    background-color: var(--bg-secondary);
+  }
+
+  .border-subtle {
+    border-color: var(--border-subtle);
+  }
+}
