@@ -64,6 +64,7 @@ module.exports = {
         },
       },
       fontFamily: {
+        display: ['"Geist Sans"', '"Geist"', 'system-ui', 'sans-serif'],
         sans: ['"Geist Sans"', '"Geist"', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['"Geist Mono"', '"GeistMono"', 'ui-monospace', 'monospace'],
       },
