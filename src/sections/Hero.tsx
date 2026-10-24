@@ -129,7 +129,7 @@ export default function Hero() {
             { value: '1,247+', label: 'Assessments Completed' },
             { value: '87%', label: 'Pass Rate' },
             { value: '5', label: 'Core Modules' },
-            { value: 'Ghana', label: 'Launch Market' },
+            { value: 'UK', label: 'Launch Market' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="font-mono text-xl md:text-3xl text-[var(--orange)]">{stat.value}</div>

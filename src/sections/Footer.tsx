@@ -20,16 +20,13 @@ export default function Footer() {
           {/* Col 1: Brand */}
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                <path d="M16 2L28 28H4L16 2Z" fill="#D4943A" />
-                <path d="M16 8L24 26H8L16 8Z" fill="#1A3A5C" />
-              </svg>
+              <img src="/images/logo-mark.png" alt="City Surface Training logo" className="h-8 w-auto" />
               <span className="font-sans font-medium text-sm tracking-wider uppercase text-[var(--white)]">
                 Surface Repair Courses
               </span>
             </div>
             <p className="font-sans text-sm text-[var(--grey)] leading-relaxed">
-              Assessing and certifying the next generation of surface restoration technicians across Ghana.
+              Assessing and certifying the next generation of surface restoration technicians across the UK.
             </p>
           </div>
 
@@ -79,11 +76,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[var(--orange)] flex-shrink-0" />
-                <span className="font-sans text-sm text-[var(--grey)]">+2330551270844</span>
+                <span className="font-sans text-sm text-[var(--grey)]">+44 20 7946 0958</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[var(--orange)] flex-shrink-0 mt-0.5" />
-                <span className="font-sans text-sm text-[var(--grey)]">Accra, Ghana</span>
+                <span className="font-sans text-sm text-[var(--grey)]">London, United Kingdom</span>
               </li>
             </ul>
           </div>

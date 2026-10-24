@@ -5,6 +5,7 @@ const navLinks = [
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'For Employers', href: '#competencies' },
   { label: 'Results', href: '#testimonials' },
+  { label: 'Academy', href: '#/academy' },
   { label: 'Register', href: '#pricing' },
 ];
 
@@ -22,6 +23,10 @@ export default function Navigation() {
 
   const scrollTo = (href: string) => {
     setMobileOpen(false);
+    if (href.startsWith('#/')) {
+      window.location.hash = href;
+      return;
+    }
     const el = document.querySelector(href);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
@@ -39,10 +44,7 @@ export default function Navigation() {
     >
       {/* Logo */}
       <div className="flex items-center gap-3">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <path d="M16 2L28 28H4L16 2Z" fill="#D4943A" />
-          <path d="M16 8L24 26H8L16 8Z" fill="#1A3A5C" />
-        </svg>
+        <img src="/images/logo-mark.png" alt="City Surface Training logo" className="h-9 w-auto" />
         <span className="font-sans font-medium text-sm tracking-wider uppercase text-[var(--white)]">
           Surface Repair Courses
         </span>

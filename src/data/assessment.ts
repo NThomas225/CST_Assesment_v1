@@ -165,40 +165,6 @@ export const modules: AssessmentModule[] = [
       },
     ],
   },
-  {
-    id: 'specialist',
-    number: 'MODULE 05',
-    title: 'Advanced Specialist Techniques',
-    description: 'Advanced repairs on enamel, cast iron, stone, Corian, and UPVC surfaces requiring specialized compounds, heat tools, and color-matching expertise.',
-    duration: '55 MIN',
-    image: '/images/module-05.jpg',
-    questions: [
-      {
-        id: 'sp-1',
-        question: 'When repairing a chip in an enamel bath, what is the correct repair sequence?',
-        options: [
-          { label: 'A', text: 'Fill with acrylic putty, sand, spray enamel paint' },
-          { label: 'B', text: 'Clean damage, apply color-matched epoxy filler, cure, sand progressively, spray enamel coating, polish' },
-          { label: 'C', text: 'Apply superglue to bind chip edges, cover with gel coat' },
-          { label: 'D', text: 'Grind out chip, weld metal patch, refinish' },
-        ],
-        correctAnswer: 'B',
-        explanation: 'Enamel repair requires: thorough cleaning → color-matched epoxy filler → proper curing → progressive sanding (120→400→800) → enamel spray coating → polishing. This ensures durability and color match.',
-      },
-      {
-        id: 'sp-2',
-        question: 'What is the key consideration when color-matching a repair on a granite worktop?',
-        options: [
-          { label: 'A', text: 'Match only the dominant base color' },
-          { label: 'B', text: 'Account for both base color and speckle pattern' },
-          { label: 'C', text: 'Use a universal grey filler for all granite types' },
-          { label: 'D', text: 'Always apply a dark tint to hide the repair' },
-        ],
-        correctAnswer: 'B',
-        explanation: 'Granite color-matching requires accounting for both the base color and the speckle/fleck pattern. A successful repair mimics the natural stone variation, not just the dominant color.',
-      },
-    ],
-  },
 ];
 
 export interface Testimonial {
@@ -212,24 +178,45 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     id: 't1',
-    quote: 'The assessment was tough but fair. It identified exactly where my knowledge gaps were in stone repair. After completing the targeted training module, I got certified and landed a job with a construction firm in Tema within two weeks.',
-    name: 'Kwame Asante',
-    role: 'Certified Surface Technician \u00B7 Accra',
+    quote: 'The assessment was tough but fair. It identified exactly where my knowledge gaps were in stone repair. After completing the targeted training module, I got certified and landed a job with a construction firm in Leeds within two weeks.',
+    name: 'Daniel Whitfield',
+    role: 'Certified Surface Technician \u00B7 Manchester',
     score: '92%',
   },
   {
     id: 't2',
     quote: "I thought I knew surface repair from watching videos, but the practical scenarios in the assessment showed me how much I was missing. The color-matching module alone was worth the entire program.",
-    name: 'Abena Owusu',
-    role: 'Glass Restoration Specialist \u00B7 Kumasi',
+    name: 'Elena Kowalski',
+    role: 'Glass Restoration Specialist \u00B7 Edinburgh',
     score: '88%',
   },
   {
     id: 't3',
     quote: "As an employer, I only hire technicians who've passed the CST assessment. The certification gives me confidence that they can handle real jobs from day one without costly mistakes.",
-    name: 'Emmanuel Mensah',
-    role: 'Site Supervisor \u00B7 Cape Coast',
+    name: 'James Hartley',
+    role: 'Site Supervisor \u00B7 London',
     score: '95%',
+  },
+  {
+    id: 't4',
+    quote: "The Academy's free fundamentals module convinced me within the first lesson — everything is filmed in a real workshop, not a slideshow. I enrolled for the full course that evening and passed my assessment three weeks later.",
+    name: 'Sophie Lindqvist',
+    role: 'Surface Repair Trainee \u00B7 Bristol',
+    score: '94%',
+  },
+  {
+    id: 't5',
+    quote: "The bath resurfacing module on the Academy is exactly the work I do on site. The quiz at the end of every lesson kept me honest, and my completion record got me straight to interview.",
+    name: 'Marco De Santis',
+    role: 'Bath & Sanitaryware Technician \u00B7 Birmingham',
+    score: '91%',
+  },
+  {
+    id: 't6',
+    quote: "We put three trainees through the Academy before booking their assessments. The step-by-step video lessons meant they arrived certified, confident and genuinely job-ready.",
+    name: 'Hannah Whitmore',
+    role: 'Operations Manager \u00B7 London',
+    score: '97%',
   },
 ];
 

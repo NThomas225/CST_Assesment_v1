@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const plans = [
   {
     name: 'STARTER',
-    price: 'GH\u20B5 1500',
+    price: '\u00A395',
     period: '',
     subtitle: 'Aptitude screening + 1 module attempt',
     features: [
@@ -22,11 +22,11 @@ const plans = [
   },
   {
     name: 'PROFESSIONAL',
-    price: 'GH\u20B5 5000',
+    price: '\u00A3295',
     period: '/assessment',
     subtitle: 'Full certification + employer network access',
     features: [
-      'All 5 module assessments',
+      'All 4 module assessments',
       'Detailed competency report',
       'Practical scenario tests',
       'Priority employer matching',

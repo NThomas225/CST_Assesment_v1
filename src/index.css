@@ -106,3 +106,164 @@
     border-color: var(--border-subtle);
   }
 }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Surface Repair Academy — component styles, themed to the site palette
+   ────────────────────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    --navy: 0 0% 7%;        /* site bg-secondary #111 */
+    --navy-deep: 0 0% 3%;   /* deeper than site black */
+    --navy-soft: 0 0% 10%;  /* site bg-card #1A1A1A */
+    --bone: 0 0% 96%;       /* site white #F4F4F4 */
+    --ember: 35 60% 53%;    /* site orange #D4943A */
+    --ember-deep: 36 65% 58%;
+  }
+}
+
+@layer components {
+  .tech-label {
+    font-family: 'Geist Mono', 'GeistMono', ui-monospace, monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    padding: 0.45em 1em;
+    border-top: 1px solid hsl(var(--ember) / 0.65);
+    border-bottom: 1px solid hsl(var(--ember) / 0.65);
+    color: hsl(var(--ember));
+  }
+  .tech-label--dim {
+    border-color: hsl(var(--bone) / 0.25);
+    color: hsl(var(--bone) / 0.75);
+  }
+
+  .btn-pill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75em;
+    padding: 0.9em 1.9em;
+    font-family: 'Geist Sans', 'Geist', system-ui, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.15s ease;
+    border: 1px solid transparent;
+  }
+  .btn-pill:active { transform: scale(0.97); }
+  .btn-pill .roll {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 1.3em;
+    line-height: 1.3em;
+  }
+  .btn-pill .roll > span {
+    display: block;
+    transition: transform 0.3s cubic-bezier(0.38, 0.005, 0.215, 1);
+  }
+  .btn-pill:hover .roll > span { transform: translateY(-1.3em); }
+  .btn-pill--primary { background: hsl(var(--ember)); color: hsl(var(--navy-deep)); }
+  .btn-pill--primary:hover { background: hsl(var(--ember-deep)); }
+  .btn-pill--ghost { border-color: hsl(var(--bone) / 0.35); color: hsl(var(--bone)); background: transparent; }
+  .btn-pill--ghost:hover { border-color: hsl(var(--ember)); color: hsl(var(--ember)); }
+  .btn-pill--dark { background: hsl(var(--navy)); color: hsl(var(--bone)); }
+  .btn-pill--dark:hover { background: hsl(var(--navy-soft)); }
+  .btn-pill--enrol {
+    border-color: hsl(var(--ember) / 0.75);
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+  }
+  .btn-pill--enrol:hover,
+  .btn-pill--enrol:focus-visible {
+    background: hsl(var(--ember-deep));
+    border-color: hsl(var(--bone) / 0.8);
+    box-shadow: 0 0 0 3px hsl(var(--ember) / 0.24), 0 0 26px hsl(var(--ember) / 0.45);
+    transform: translateY(-2px);
+    outline: none;
+  }
+  .btn-pill--enrol:active { transform: translateY(0) scale(0.97); }
+
+  .arrow-slide {
+    display: inline-flex;
+    overflow: hidden;
+    width: 1.1em;
+    height: 1.1em;
+  }
+  .arrow-slide svg { flex: none; transition: transform 0.3s cubic-bezier(0.38, 0.005, 0.215, 1); }
+  .arrow-slide svg:last-child { transform: translateX(-100%); }
+  a:hover .arrow-slide svg:first-child, button:hover .arrow-slide svg:first-child { transform: translateX(100%); }
+  a:hover .arrow-slide svg:last-child, button:hover .arrow-slide svg:last-child { transform: translateX(0%); }
+
+  .reveal-line { display: block; overflow: hidden; }
+  .reveal-line > span {
+    display: inline-block;
+    transform: translate3d(0, 110%, 0);
+    transition: transform 0.7s cubic-bezier(0.38, 0.005, 0.215, 1);
+    transition-delay: var(--d, 0s);
+    will-change: transform;
+  }
+  .revealed .reveal-line > span { transform: translate3d(0, 0, 0); }
+
+  .img-reveal { overflow: hidden; }
+  .img-reveal img, .img-reveal video {
+    transform: scale(1.1);
+    transition: transform 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+    will-change: transform;
+  }
+  .revealed .img-reveal img, .revealed .img-reveal video,
+  .img-reveal.revealed img, .img-reveal.revealed video { transform: scale(1); }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition-delay: var(--d, 0s);
+  }
+  .revealed .fade-up, .fade-up.revealed { opacity: 1; transform: translateY(0); }
+
+  .razor { height: 1px; background: hsl(var(--bone) / 0.14); border: 0; }
+  .razor-v { width: 1px; align-self: stretch; background: hsl(var(--bone) / 0.18); }
+
+  .module-tile {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    isolation: isolate;
+  }
+  .module-tile img { transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1); }
+  .module-tile:hover img { transform: scale(1.05); }
+
+  .card-surface {
+    background: hsl(var(--navy));
+    border: 1px solid hsl(var(--bone) / 0.1);
+  }
+
+  .link-underline { position: relative; }
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -2px;
+    width: 100%; height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  .link-underline:hover::after { transform: scaleX(1); transform-origin: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-line > span, .fade-up, .img-reveal img, .img-reveal video,
+  .btn-pill .roll > span, .arrow-slide svg, .module-tile img {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
