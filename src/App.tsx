@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Analytics } from '@vercel/analytics/react';
 
 import { useHashRoute, type Route } from './hooks/useHashRoute';
 
@@ -113,14 +114,22 @@ export default function App() {
   }, [routeKey]);
 
   if (route.name === 'home') {
-    return <Landing />;
+    return (
+      <>
+        <Landing />
+        <Analytics />
+      </>
+    );
   }
 
   return (
-    <div className="min-h-[100dvh] bg-[hsl(var(--navy-deep))] text-[hsl(var(--bone))]">
-      <AcademyNav routeName={route.name} />
-      <AcademyPage route={route} />
-      <Footer />
-    </div>
+    <>
+      <div className="min-h-[100dvh] bg-[hsl(var(--navy-deep))] text-[hsl(var(--bone))]">
+        <AcademyNav routeName={route.name} />
+        <AcademyPage route={route} />
+        <Footer />
+      </div>
+      <Analytics />
+    </>
   );
 }
