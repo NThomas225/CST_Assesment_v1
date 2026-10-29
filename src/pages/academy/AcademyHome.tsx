@@ -97,6 +97,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── COURSE INTRODUCTION ── */}
+      <section className="py-20 md:py-24 bg-[hsl(var(--navy))]">
+        <div className="mx-auto max-w-[1272px] px-4 md:px-6 grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:items-center">
+          <div>
+            <TechLabel>Meet your trainer</TechLabel>
+            <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold uppercase leading-tight">
+              Your course introduction
+            </h2>
+            <p className="mt-4 text-sm md:text-base text-[hsl(var(--bone)/0.65)] leading-relaxed max-w-md">
+              Mark introduces the course and explains the skills you will develop across all four modules.
+            </p>
+          </div>
+          <div className="card-surface overflow-hidden">
+            <video
+              src="/videos/course-introduction.mp4"
+              poster="/videos/course-introduction-poster.jpg"
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full aspect-video object-contain bg-black"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ── MODULES ── */}
       <section id="modules" className="py-24 md:py-32">
         <div className="mx-auto max-w-[1272px] px-4 md:px-6">
