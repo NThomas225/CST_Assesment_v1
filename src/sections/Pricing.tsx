@@ -18,6 +18,7 @@ const plans = [
       'Email summary',
     ],
     cta: 'Get Started',
+    href: 'https://book.stripe.com/7sY28rd4veoy8yufhndEs03',
     featured: false,
   },
   {
@@ -34,6 +35,7 @@ const plans = [
       '12-month skill profile',
     ],
     cta: 'Enroll Now',
+    href: 'https://book.stripe.com/bJe3cvggHgwGg0Wc5bdEs01',
     featured: true,
   },
   {
@@ -152,15 +154,26 @@ export default function Pricing() {
               </ul>
 
               {/* CTA */}
-              <button
-                className={`w-full font-sans font-medium text-sm uppercase py-4 transition-colors duration-200 cursor-pointer ${
-                  plan.featured
-                    ? 'bg-[var(--orange)] text-[var(--black)] hover:bg-[#E0A040]'
-                    : 'border border-[var(--grey)] text-[var(--white)] hover:border-[var(--orange)] hover:text-[var(--orange)] bg-transparent'
-                }`}
-              >
-                {plan.cta}
-              </button>
+              {plan.href ? (
+                <a
+                  href={plan.href}
+                  {...(plan.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  className={`block w-full text-center font-sans font-medium text-sm uppercase py-4 transition-colors duration-200 cursor-pointer ${
+                    plan.featured
+                      ? 'bg-[var(--orange)] text-[var(--black)] hover:bg-[#E0A040]'
+                      : 'border border-[var(--grey)] text-[var(--white)] hover:border-[var(--orange)] hover:text-[var(--orange)] bg-transparent'
+                  }`}
+                >
+                  {plan.cta}
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  className="w-full font-sans font-medium text-sm uppercase py-4 transition-colors duration-200 cursor-pointer border border-[var(--grey)] text-[var(--white)] hover:border-[var(--orange)] hover:text-[var(--orange)] bg-transparent"
+                >
+                  {plan.cta}
+                </button>
+              )}
             </div>
           ))}
         </div>
