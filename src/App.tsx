@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 import { useHashRoute, type Route } from './hooks/useHashRoute';
 
@@ -81,6 +82,7 @@ function Landing() {
 
       {/* Footer */}
       <Footer />
+      <SpeedInsights />
     </>
   );
 }
@@ -121,6 +123,7 @@ export default function App() {
       <AcademyNav routeName={route.name} />
       <AcademyPage route={route} />
       <Footer />
+      <SpeedInsights />
     </div>
   );
 }
